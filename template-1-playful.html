@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precious Annisa - Template 1 Playful & Colorful</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'fredoka': ['Fredoka One', 'cursive'],
+                        'nunito': ['Nunito', 'sans-serif'],
+                        'dancing': ['Dancing Script', 'cursive'],
+                    },
+                    colors: {
+                        'candy': {
+                            'pink': '#FF6B9D',
+                            'purple': '#C084FC',
+                            'yellow': '#FDE047',
+                            'mint': '#6EE7B7',
+                            'sky': '#7DD3FC',
+                            'coral': '#FB923C',
+                            'soft': '#FFF0F5',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'float-delay': 'float 3s ease-in-out 1s infinite',
+                        'wiggle': 'wiggle 2s ease-in-out infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'sparkle': 'sparkle 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
+                        },
+                        sparkle: {
+                            '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                            '50%': { opacity: '0.7', transform: 'scale(1.1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #FF6B9D 0%, #C084FC 50%, #7DD3FC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .blob-shape {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .blob-shape-2 {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+        .wavy-divider {
+            position: relative;
+        }
+        .wavy-divider::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60'%3E%3Cpath fill='%23ffffff' d='M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z'/%3E%3C/svg%3E") repeat-x;
+            background-size: 1440px 60px;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) rotate(1deg);
+        }
+        .star-decoration::before {
+            content: '⭐';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 24px;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="font-nunito bg-white overflow-x-hidden">
+
+    <!-- Floating Decorations -->
+    <div class="fixed top-20 left-10 text-4xl animate-float opacity-30 pointer-events-none z-0">🌟</div>
+    <div class="fixed top-40 right-16 text-3xl animate-float-delay opacity-30 pointer-events-none z-0">🎵</div>
+    <div class="fixed bottom-32 left-20 text-3xl animate-float opacity-30 pointer-events-none z-0">🎨</div>
+    <div class="fixed bottom-20 right-10 text-4xl animate-float-delay opacity-30 pointer-events-none z-0">✨</div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+            <a href="#" class="font-dancing text-2xl text-candy-pink">Precious Annisa</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="text-gray-600 hover:text-candy-pink transition font-semibold text-sm">About</a>
+                <a href="#talents" class="text-gray-600 hover:text-candy-pink transition font-semibold text-sm">Talents</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-candy-pink transition font-semibold text-sm">Portfolio</a>
+                <a href="#music" class="text-gray-600 hover:text-candy-pink transition font-semibold text-sm">Music</a>
+                <a href="#media" class="text-gray-600 hover:text-candy-pink transition font-semibold text-sm">Media</a>
+                <a href="#contact" class="bg-gradient-to-r from-candy-pink to-candy-purple text-white px-5 py-2 rounded-full text-sm font-bold hover:shadow-lg transition">Contact</a>
+            </div>
+            <button class="md:hidden text-candy-pink text-2xl">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen relative flex items-center bg-gradient-to-br from-candy-soft via-white to-purple-50 pt-20">
+        <!-- Background Blobs -->
+        <div class="absolute top-20 right-0 w-72 h-72 bg-candy-pink/10 blob-shape blur-3xl"></div>
+        <div class="absolute bottom-10 left-0 w-96 h-96 bg-candy-purple/10 blob-shape-2 blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/3 w-64 h-64 bg-candy-yellow/10 blob-shape blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 bg-candy-yellow/30 text-amber-700 px-4 py-2 rounded-full text-sm font-bold mb-6 animate-wiggle">
+                    🌟 Little Star, Big Dreams!
+                </div>
+                <h1 class="font-fredoka text-5xl md:text-7xl leading-tight mb-4">
+                    <span class="text-gray-800">Hi, I'm</span><br>
+                    <span class="gradient-text">Precious</span><br>
+                    <span class="gradient-text">Annisa!</span>
+                </h1>
+                <p class="text-gray-500 text-lg md:text-xl mb-8 max-w-lg">
+                    A 6-year-old shining star with a heart full of charm ✨ 
+                    Singer, model, actress & creative artist from Kuala Lumpur & Jakarta.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#portfolio" class="bg-gradient-to-r from-candy-pink to-candy-purple text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl hover:shadow-candy-pink/30 transition transform hover:scale-105">
+                        See My Work 🎬
+                    </a>
+                    <a href="#music" class="bg-white border-2 border-candy-purple text-candy-purple px-8 py-4 rounded-full font-bold text-lg hover:bg-candy-purple hover:text-white transition">
+                        Listen Now 🎵
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="w-80 h-80 md:w-96 md:h-96 bg-gradient-to-br from-candy-pink via-candy-purple to-candy-sky rounded-full flex items-center justify-center animate-float shadow-2xl shadow-candy-pink/20">
+                    <div class="w-72 h-72 md:w-88 md:h-88 bg-gray-200 rounded-full flex items-center justify-center text-6xl border-4 border-white">
+                        👧🏻
+                    </div>
+                </div>
+                <!-- Floating badges -->
+                <div class="absolute -top-2 -right-2 bg-candy-yellow text-amber-800 px-4 py-2 rounded-2xl font-bold text-sm animate-bounce-slow shadow-lg">
+                    🎤 Singer
+                </div>
+                <div class="absolute bottom-10 -left-8 bg-candy-mint text-emerald-800 px-4 py-2 rounded-2xl font-bold text-sm animate-float shadow-lg">
+                    🎨 Artist
+                </div>
+                <div class="absolute bottom-32 -right-6 bg-candy-sky text-blue-800 px-4 py-2 rounded-2xl font-bold text-sm animate-float-delay shadow-lg">
+                    🌟 Model
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Ribbon -->
+    <section class="bg-gradient-to-r from-candy-pink via-candy-purple to-candy-sky py-8 relative overflow-hidden">
+        <div class="absolute inset-0 bg-white/10"></div>
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white relative z-10">
+            <div>
+                <div class="font-fredoka text-3xl md:text-4xl">80+</div>
+                <div class="text-white/80 text-sm font-semibold">Media Coverage</div>
+            </div>
+            <div>
+                <div class="font-fredoka text-3xl md:text-4xl">7.3M</div>
+                <div class="text-white/80 text-sm font-semibold">Instagram Views</div>
+            </div>
+            <div>
+                <div class="font-fredoka text-3xl md:text-4xl">3M+</div>
+                <div class="text-white/80 text-sm font-semibold">Accounts Reached</div>
+            </div>
+            <div>
+                <div class="font-fredoka text-3xl md:text-4xl">4M</div>
+                <div class="text-white/80 text-sm font-semibold">IG Impressions</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-candy-pink font-bold text-sm uppercase tracking-widest">Get to Know Me</span>
+                <h2 class="font-fredoka text-4xl md:text-5xl text-gray-800 mt-2">About <span class="gradient-text">Annisa</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-gradient-to-br from-candy-soft to-purple-50 rounded-3xl p-8 relative">
+                    <div class="w-full h-80 bg-gray-200 rounded-2xl flex items-center justify-center text-8xl">
+                        📸
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-candy-yellow px-6 py-3 rounded-2xl font-bold text-amber-800 shadow-lg animate-wiggle">
+                        Born Feb 2019 🎂
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-fredoka text-2xl text-gray-800 mb-4">Meet a shining young star! ✨</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        <strong>Precious Annisa Dalimunthe</strong>, affectionately known as <strong>Annisa Dalimunthe</strong> in Indonesia 
+                        and <strong>Precious Annisa</strong> in Malaysia, is a bright and talented kid who continues to capture hearts 
+                        across social media.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Active on Instagram since <strong>June 2024</strong>, her journey has grown rapidly and organically, 
+                        reflecting genuine audience connection. She has achieved <strong>4,248 organic followers</strong> 
+                        while reaching an impressive <strong>4 million accounts</strong> on Instagram.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-candy-pink/10 p-4 rounded-2xl text-center card-hover">
+                            <div class="text-2xl mb-1">📏</div>
+                            <div class="font-bold text-gray-800">110cm</div>
+                            <div class="text-xs text-gray-500">Height</div>
+                        </div>
+                        <div class="bg-candy-purple/10 p-4 rounded-2xl text-center card-hover">
+                            <div class="text-2xl mb-1">⚖️</div>
+                            <div class="font-bold text-gray-800">20kg</div>
+                            <div class="text-xs text-gray-500">Weight</div>
+                        </div>
+                        <div class="bg-candy-sky/10 p-4 rounded-2xl text-center card-hover">
+                            <div class="text-2xl mb-1">📍</div>
+                            <div class="font-bold text-gray-800">KL & Jakarta</div>
+                            <div class="text-xs text-gray-500">Domicile</div>
+                        </div>
+                        <div class="bg-candy-mint/10 p-4 rounded-2xl text-center card-hover">
+                            <div class="text-2xl mb-1">🎂</div>
+                            <div class="font-bold text-gray-800">Feb 2019</div>
+                            <div class="text-xs text-gray-500">Born</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talents Section -->
+    <section id="talents" class="py-24 bg-gradient-to-br from-candy-soft via-white to-purple-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-candy-purple font-bold text-sm uppercase tracking-widest">What I Love To Do</span>
+                <h2 class="font-fredoka text-4xl md:text-5xl text-gray-800 mt-2">My <span class="gradient-text">Talents</span></h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-3xl p-8 text-center shadow-lg shadow-candy-pink/10 card-hover relative star-decoration">
+                    <div class="w-20 h-20 bg-candy-pink/20 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">🎤</div>
+                    <h3 class="font-fredoka text-xl text-gray-800 mb-2">Singing</h3>
+                    <p class="text-gray-500 text-sm">Released debut single "Anugerah Terindah" under Aksen Entertainment</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 text-center shadow-lg shadow-candy-purple/10 card-hover relative">
+                    <div class="w-20 h-20 bg-candy-purple/20 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">📸</div>
+                    <h3 class="font-fredoka text-xl text-gray-800 mb-2">Modelling</h3>
+                    <p class="text-gray-500 text-sm">Professional photo shoots with top brands like Dunkin' Donut & SP Setia</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 text-center shadow-lg shadow-candy-sky/10 card-hover relative">
+                    <div class="w-20 h-20 bg-candy-sky/20 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">🎭</div>
+                    <h3 class="font-fredoka text-xl text-gray-800 mb-2">Acting</h3>
+                    <p class="text-gray-500 text-sm">Natural talent for performing in commercial video shoots and events</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 text-center shadow-lg shadow-candy-mint/10 card-hover relative">
+                    <div class="w-20 h-20 bg-candy-mint/20 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">🎨</div>
+                    <h3 class="font-fredoka text-xl text-gray-800 mb-2">Creative Arts</h3>
+                    <p class="text-gray-500 text-sm">Passionate about drawing, coloring, and all forms of creative expression</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-candy-coral font-bold text-sm uppercase tracking-widest">My Work</span>
+                <h2 class="font-fredoka text-4xl md:text-5xl text-gray-800 mt-2">Commercial <span class="gradient-text">Portfolio</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- SP Setia -->
+                <div class="group bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-56 bg-gray-200 flex items-center justify-center text-6xl relative overflow-hidden">
+                        🎬
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">Watch Video ▶</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full">Video Shoot</span>
+                            <span class="bg-purple-100 text-purple-700 text-xs font-bold px-3 py-1 rounded-full">Commercial</span>
+                        </div>
+                        <h3 class="font-fredoka text-xl text-gray-800 mb-2">SP Setia's 50th Year Anniversary</h3>
+                        <p class="text-gray-500 text-sm">Featured in the official anniversary video campaign for SP Setia, one of Malaysia's leading property developers.</p>
+                    </div>
+                </div>
+                <!-- Dunkin Donut -->
+                <div class="group bg-gradient-to-br from-pink-50 to-orange-50 rounded-3xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-56 bg-gray-200 flex items-center justify-center text-6xl relative overflow-hidden">
+                        🍩
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">View Gallery 📷</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-pink-100 text-pink-700 text-xs font-bold px-3 py-1 rounded-full">Photo Shoot</span>
+                            <span class="bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full">Video Shoot</span>
+                        </div>
+                        <h3 class="font-fredoka text-xl text-gray-800 mb-2">Dunkin' Donut - Chocolate Greentea Launch</h3>
+                        <p class="text-gray-500 text-sm">Star of the new flavor launch campaign featuring photo and video shoots for Dunkin' Donut's Chocolate Greentea.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="py-24 bg-gradient-to-br from-purple-100 via-candy-soft to-pink-100 relative overflow-hidden">
+        <div class="absolute top-10 left-10 text-6xl opacity-10 animate-float">🎵</div>
+        <div class="absolute bottom-10 right-10 text-6xl opacity-10 animate-float-delay">🎶</div>
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-candy-purple font-bold text-sm uppercase tracking-widest">Listen Now</span>
+                <h2 class="font-fredoka text-4xl md:text-5xl text-gray-800 mt-2">My <span class="gradient-text">Music</span></h2>
+            </div>
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-gradient-to-br from-candy-pink to-candy-purple rounded-2xl h-64 flex items-center justify-center text-8xl shadow-lg">
+                        🎵
+                    </div>
+                    <div>
+                        <div class="bg-candy-yellow/30 text-amber-700 px-4 py-1 rounded-full text-xs font-bold inline-block mb-4">
+                            🆕 Latest Release
+                        </div>
+                        <h3 class="font-fredoka text-3xl text-gray-800 mb-2">Anugerah Terindah</h3>
+                        <p class="text-gray-500 mb-1 text-sm">Label: <strong>Aksen Entertainment</strong></p>
+                        <p class="text-gray-500 mb-4 text-sm">Composed by: <strong>Posan Tobing</strong> (Former drummer of Kotak band, composer of "Lagu Untuk Kamu" - 300M+ views)</p>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Launch event hosted by renowned Indonesian kids' idol <strong>Chiquita Meidy</strong> with coverage from <strong>80+ media outlets</strong> nationwide.
+                        </p>
+                        <button class="bg-gradient-to-r from-candy-pink to-candy-purple text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transition transform hover:scale-105">
+                            ▶ Play on YouTube
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Coverage Section -->
+    <section id="media" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-candy-pink font-bold text-sm uppercase tracking-widest">In The News</span>
+                <h2 class="font-fredoka text-4xl md:text-5xl text-gray-800 mt-2">Media <span class="gradient-text">Coverage</span></h2>
+                <p class="text-gray-500 mt-4 max-w-xl mx-auto">Featured in over 80 national and digital media outlets across Indonesia and Malaysia.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-gray-50 rounded-2xl p-6 flex items-center justify-center h-24 card-hover border-2 border-transparent hover:border-candy-pink">
+                    <span class="font-bold text-gray-400">Kompas.com</span>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-6 flex items-center justify-center h-24 card-hover border-2 border-transparent hover:border-candy-purple">
+                    <span class="font-bold text-gray-400">Tribunnews</span>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-6 flex items-center justify-center h-24 card-hover border-2 border-transparent hover:border-candy-sky">
+                    <span class="font-bold text-gray-400">Detik.com</span>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-6 flex items-center justify-center h-24 card-hover border-2 border-transparent hover:border-candy-mint">
+                    <span class="font-bold text-gray-400">CNN Indonesia</span>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-6 flex items-center justify-center h-24 card-hover border-2 border-transparent hover:border-candy-coral">
+                    <span class="font-bold text-gray-400">Liputan6</span>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-6 flex items-center justify-center h-24 card-hover border-2 border-transparent hover:border-candy-pink">
+                    <span class="font-bold text-gray-400">Metro TV</span>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-6 flex items-center justify-center h-24 card-hover border-2 border-transparent hover:border-candy-purple">
+                    <span class="font-bold text-gray-400">Suara.com</span>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-6 flex items-center justify-center h-24 card-hover border-2 border-transparent hover:border-candy-sky">
+                    <span class="font-bold text-gray-400">+73 More</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Insights Section -->
+    <section class="py-24 bg-gradient-to-br from-candy-soft via-white to-purple-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-candy-purple font-bold text-sm uppercase tracking-widest">Social Media</span>
+                <h2 class="font-fredoka text-4xl md:text-5xl text-gray-800 mt-2">Instagram <span class="gradient-text">Insights</span></h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-3xl p-6 text-center shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 text-white">📊</div>
+                    <div class="font-fredoka text-3xl text-gray-800">7.3M</div>
+                    <div class="text-gray-500 text-sm">Total Views</div>
+                    <div class="text-candy-mint text-xs font-bold mt-1">Last 90 days</div>
+                </div>
+                <div class="bg-white rounded-3xl p-6 text-center shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 text-white">👥</div>
+                    <div class="font-fredoka text-3xl text-gray-800">3M+</div>
+                    <div class="text-gray-500 text-sm">Accounts Reached</div>
+                    <div class="text-candy-pink text-xs font-bold mt-1">+21,393%</div>
+                </div>
+                <div class="bg-white rounded-3xl p-6 text-center shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-pink-500 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 text-white">🔥</div>
+                    <div class="font-fredoka text-3xl text-gray-800">98.8%</div>
+                    <div class="text-gray-500 text-sm">Non-Followers</div>
+                    <div class="text-candy-coral text-xs font-bold mt-1">Organic Reach</div>
+                </div>
+                <div class="bg-white rounded-3xl p-6 text-center shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 text-white">🎬</div>
+                    <div class="font-fredoka text-3xl text-gray-800">80%</div>
+                    <div class="text-gray-500 text-sm">From Reels</div>
+                    <div class="text-candy-sky text-xs font-bold mt-1">Content Type</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gradient-to-br from-candy-pink via-candy-purple to-candy-sky relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="font-fredoka text-4xl md:text-5xl text-white mb-4">Let's Work <span class="text-candy-yellow">Together!</span></h2>
+            <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto">
+                Interested in collaborating with Precious Annisa? Reach out for commercial projects, brand partnerships, and media inquiries.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#" class="bg-white text-candy-pink px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition transform hover:scale-105">
+                    📧 Email Us
+                </a>
+                <a href="#" class="bg-candy-yellow text-amber-800 px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition transform hover:scale-105">
+                    📱 Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="font-dancing text-3xl mb-4">Precious Annisa</p>
+            <p class="text-gray-400 text-sm mb-6">Singer · Model · Actress · Creative Artist</p>
+            <div class="flex justify-center gap-6 mb-6">
+                <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-candy-pink transition">📷</a>
+                <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-500 transition">▶</a>
+                <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-candy-sky transition">🐦</a>
+            </div>
+            <p class="text-gray-500 text-xs">&copy; 2026 Precious Annisa. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

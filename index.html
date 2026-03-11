@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precious Annisa — Choose Your Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Sora', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #E91E90 0%, #8B5CF6 50%, #3B82F6 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #E91E90 0%, #8B5CF6 50%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card-hover:hover {
+            transform: translateY(-12px);
+        }
+        .preview-frame {
+            border: none;
+            width: 200%;
+            height: 200%;
+            transform: scale(0.5);
+            transform-origin: top left;
+            pointer-events: none;
+        }
+        .preview-container {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+        .shimmer {
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        .floating-delay {
+            animation: float 3s ease-in-out 1s infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-white min-h-screen">
+
+    <!-- Header -->
+    <header class="py-16 px-6 text-center relative overflow-hidden">
+        <!-- Background mesh -->
+        <div class="absolute inset-0" style="background: radial-gradient(ellipse at 20% 50%, rgba(233,30,144,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(139,92,246,0.08) 0%, transparent 60%);"></div>
+        <!-- Grid overlay -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+        
+        <div class="relative z-10">
+            <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest text-gray-400 mb-8">
+                ✦ Website Template Preview
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4">
+                <span class="text-white">Precious</span> <span class="gradient-text">Annisa</span>
+            </h1>
+            <p class="text-gray-400 text-lg max-w-xl mx-auto mb-2">
+                3 template website pilihan untuk client review.
+            </p>
+            <p class="text-gray-600 text-sm">Click salah satu template untuk melihat full preview →</p>
+        </div>
+    </header>
+
+    <!-- Templates Grid -->
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Template 1 -->
+            <a href="template-1-playful.html" class="block card-hover group">
+                <div class="bg-gray-900 rounded-3xl overflow-hidden border border-white/5 group-hover:border-pink-500/30 transition-colors">
+                    <!-- Preview thumbnail -->
+                    <div class="preview-container relative">
+                        <div class="w-full h-full bg-gradient-to-br from-pink-100 via-white to-purple-50 flex flex-col">
+                            <!-- Mini hero preview -->
+                            <div class="bg-gradient-to-r from-[#FF6B9D] via-[#C084FC] to-[#7DD3FC] h-12 flex items-center px-6">
+                                <div class="flex gap-3">
+                                    <div class="w-16 h-2 bg-white/40 rounded-full"></div>
+                                    <div class="w-10 h-2 bg-white/40 rounded-full"></div>
+                                    <div class="w-10 h-2 bg-white/40 rounded-full"></div>
+                                </div>
+                            </div>
+                            <div class="flex-1 flex items-center justify-center gap-6 px-6">
+                                <div>
+                                    <div class="w-8 h-2 bg-pink-200 rounded-full mb-2"></div>
+                                    <div class="w-20 h-6 bg-gradient-to-r from-pink-400 to-purple-400 rounded-xl mb-2"></div>
+                                    <div class="w-16 h-6 bg-gradient-to-r from-purple-400 to-sky-400 rounded-xl mb-3"></div>
+                                    <div class="w-full h-2 bg-gray-200 rounded-full mb-1"></div>
+                                    <div class="w-3/4 h-2 bg-gray-200 rounded-full mb-4"></div>
+                                    <div class="flex gap-2">
+                                        <div class="w-20 h-6 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full"></div>
+                                        <div class="w-16 h-6 border-2 border-purple-400 rounded-full"></div>
+                                    </div>
+                                </div>
+                                <div class="w-24 h-24 bg-gradient-to-br from-pink-300 via-purple-300 to-sky-300 rounded-full flex items-center justify-center text-3xl flex-shrink-0">👧🏻</div>
+                            </div>
+                            <!-- Stats ribbon preview -->
+                            <div class="bg-gradient-to-r from-pink-400 via-purple-400 to-sky-400 py-3 flex justify-around px-4">
+                                <div class="text-center"><div class="w-6 h-2 bg-white/70 rounded mx-auto mb-1"></div><div class="w-4 h-1 bg-white/40 rounded mx-auto"></div></div>
+                                <div class="text-center"><div class="w-6 h-2 bg-white/70 rounded mx-auto mb-1"></div><div class="w-4 h-1 bg-white/40 rounded mx-auto"></div></div>
+                                <div class="text-center"><div class="w-6 h-2 bg-white/70 rounded mx-auto mb-1"></div><div class="w-4 h-1 bg-white/40 rounded mx-auto"></div></div>
+                                <div class="text-center"><div class="w-6 h-2 bg-white/70 rounded mx-auto mb-1"></div><div class="w-4 h-1 bg-white/40 rounded mx-auto"></div></div>
+                            </div>
+                        </div>
+                        <!-- Hover overlay -->
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-full font-bold text-sm">Buka Template →</span>
+                        </div>
+                    </div>
+                    <!-- Card Info -->
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-pink-500/10 text-pink-400 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Template 01</span>
+                            <div class="flex -space-x-1">
+                                <div class="w-4 h-4 bg-pink-400 rounded-full border border-gray-900"></div>
+                                <div class="w-4 h-4 bg-purple-400 rounded-full border border-gray-900"></div>
+                                <div class="w-4 h-4 bg-sky-400 rounded-full border border-gray-900"></div>
+                            </div>
+                        </div>
+                        <h2 class="text-xl font-bold mb-2 group-hover:gradient-text transition">Playful & Colorful</h2>
+                        <p class="text-gray-500 text-sm leading-relaxed">Ceria, fun, penuh warna. Cocok untuk audience keluarga & anak-anak. Design rounded dan bubbly dengan animasi yang menyenangkan.</p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="text-xs text-gray-600 bg-white/5 px-2 py-1 rounded-md">Candy Pink</span>
+                            <span class="text-xs text-gray-600 bg-white/5 px-2 py-1 rounded-md">Fredoka One</span>
+                            <span class="text-xs text-gray-600 bg-white/5 px-2 py-1 rounded-md">Animations</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Template 2 -->
+            <a href="template-2-elegant.html" class="block card-hover group">
+                <div class="bg-gray-900 rounded-3xl overflow-hidden border border-white/5 group-hover:border-rose-400/30 transition-colors">
+                    <!-- Preview thumbnail -->
+                    <div class="preview-container relative">
+                        <div class="w-full h-full bg-gradient-to-b from-[#FDF2F8] to-[#FFFAF5] flex flex-col">
+                            <!-- Elegant nav -->
+                            <div class="bg-white/90 h-10 flex items-center justify-between px-6 border-b border-rose-100">
+                                <div class="w-16 h-2 bg-rose-300 rounded-full"></div>
+                                <div class="flex gap-4">
+                                    <div class="w-8 h-1 bg-gray-200 rounded-full"></div>
+                                    <div class="w-8 h-1 bg-gray-200 rounded-full"></div>
+                                    <div class="w-12 h-4 border border-rose-300 rounded-sm"></div>
+                                </div>
+                            </div>
+                            <!-- Hero preview -->
+                            <div class="flex-1 flex items-center justify-center gap-8 px-6">
+                                <div class="flex-1">
+                                    <div class="w-20 h-0.5 bg-amber-400 mb-3"></div>
+                                    <div class="w-12 h-2 bg-amber-200 rounded-full mb-2"></div>
+                                    <div class="w-20 h-5 bg-gray-800 rounded mb-1"></div>
+                                    <div class="w-16 h-5 bg-rose-400 rounded mb-3"></div>
+                                    <div class="w-full h-1.5 bg-gray-200 rounded-full mb-1"></div>
+                                    <div class="w-4/5 h-1.5 bg-gray-200 rounded-full mb-4"></div>
+                                    <div class="flex gap-2">
+                                        <div class="w-16 h-5 bg-rose-400 rounded"></div>
+                                        <div class="w-14 h-5 border border-gray-300 rounded"></div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="w-20 h-28 bg-gray-200 rounded-t-full border-2 border-white shadow-lg flex items-end justify-center pb-1 text-2xl">👧🏻</div>
+                                    <div class="w-24 h-5 bg-white shadow-md border border-rose-100 flex items-center justify-center -mt-1">
+                                        <div class="w-10 h-1 bg-rose-300 rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Divider stats -->
+                            <div class="border-t border-rose-100 py-3 flex justify-around px-4 bg-white/60">
+                                <div class="text-center"><div class="w-6 h-2 bg-rose-300 rounded mx-auto mb-1"></div><div class="w-8 h-1 bg-gray-200 rounded mx-auto"></div></div>
+                                <div class="text-center"><div class="w-6 h-2 bg-rose-300 rounded mx-auto mb-1"></div><div class="w-8 h-1 bg-gray-200 rounded mx-auto"></div></div>
+                                <div class="text-center"><div class="w-6 h-2 bg-rose-300 rounded mx-auto mb-1"></div><div class="w-8 h-1 bg-gray-200 rounded mx-auto"></div></div>
+                                <div class="text-center"><div class="w-6 h-2 bg-rose-300 rounded mx-auto mb-1"></div><div class="w-8 h-1 bg-gray-200 rounded mx-auto"></div></div>
+                            </div>
+                        </div>
+                        <!-- Hover overlay -->
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="bg-rose-500 text-white px-6 py-3 rounded font-bold text-sm tracking-wider uppercase">Buka Template →</span>
+                        </div>
+                    </div>
+                    <!-- Card Info -->
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-rose-500/10 text-rose-400 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Template 02</span>
+                            <div class="flex -space-x-1">
+                                <div class="w-4 h-4 bg-rose-400 rounded-full border border-gray-900"></div>
+                                <div class="w-4 h-4 bg-amber-400 rounded-full border border-gray-900"></div>
+                                <div class="w-4 h-4 bg-gray-200 rounded-full border border-gray-900"></div>
+                            </div>
+                        </div>
+                        <h2 class="text-xl font-bold mb-2">Elegant & Modern</h2>
+                        <p class="text-gray-500 text-sm leading-relaxed">Sophisticated, clean, premium. Nuansa editorial magazine dengan gold accent. Ideal untuk kesan profesional dan berkelas.</p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="text-xs text-gray-600 bg-white/5 px-2 py-1 rounded-md">Rose & Gold</span>
+                            <span class="text-xs text-gray-600 bg-white/5 px-2 py-1 rounded-md">Playfair Display</span>
+                            <span class="text-xs text-gray-600 bg-white/5 px-2 py-1 rounded-md">Editorial</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Template 3 -->
+            <a href="template-3-dynamic.html" class="block card-hover group">
+                <div class="bg-gray-900 rounded-3xl overflow-hidden border border-white/5 group-hover:border-violet-500/30 transition-colors">
+                    <!-- Preview thumbnail -->
+                    <div class="preview-container relative">
+                        <div class="w-full h-full bg-[#0F0F1A] flex flex-col">
+                            <!-- Dark nav -->
+                            <div class="h-10 border-b border-white/5 flex items-center justify-between px-6">
+                                <div class="w-16 h-2 rounded-full bg-gradient-to-r from-pink-500 to-violet-500"></div>
+                                <div class="flex gap-3">
+                                    <div class="w-6 h-1 bg-white/10 rounded-full"></div>
+                                    <div class="w-6 h-1 bg-white/10 rounded-full"></div>
+                                    <div class="w-12 h-4 rounded-full bg-gradient-to-r from-pink-500 to-violet-500"></div>
+                                </div>
+                            </div>
+                            <!-- Hero dark preview -->
+                            <div class="flex-1 flex items-center gap-6 px-6 relative overflow-hidden">
+                                <!-- Grid lines -->
+                                <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px); background-size: 20px 20px;"></div>
+                                <div class="flex-1 relative z-10">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <div class="w-6 h-0.5 bg-pink-500"></div>
+                                        <div class="w-14 h-1 bg-pink-500/30 rounded-full"></div>
+                                    </div>
+                                    <div class="text-white/80 text-xl font-extrabold leading-none mb-0.5">PRECIOUS</div>
+                                    <div class="text-xl font-extrabold leading-none mb-3" style="-webkit-text-stroke: 1px #E91E90; -webkit-text-fill-color: transparent;">ANNISA</div>
+                                    <div class="w-full h-1.5 bg-white/5 rounded-full mb-1"></div>
+                                    <div class="w-3/4 h-1.5 bg-white/5 rounded-full mb-4"></div>
+                                    <div class="flex gap-2">
+                                        <div class="w-20 h-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500"></div>
+                                        <div class="w-16 h-6 rounded-full border border-white/10"></div>
+                                    </div>
+                                </div>
+                                <!-- Photo card -->
+                                <div class="w-20 h-28 rounded-2xl flex items-center justify-center text-3xl relative flex-shrink-0 overflow-hidden border border-white/10" style="background: linear-gradient(135deg, rgba(233,30,144,0.2), rgba(139,92,246,0.2))">
+                                    👧🏻
+                                    <!-- Floating badge -->
+                                    <div class="absolute -left-3 top-4 bg-white/10 backdrop-blur rounded-xl px-1.5 py-1 border border-white/10">
+                                        <div class="w-5 h-1.5 bg-pink-400 rounded mb-0.5"></div>
+                                        <div class="w-3 h-1 bg-white/20 rounded"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Dark stats bar -->
+                            <div class="border-t border-white/5 bg-[#1A1A2E] py-3 flex justify-around px-4">
+                                <div class="text-center"><div class="w-6 h-2 rounded bg-gradient-to-r from-pink-500 to-violet-400 mb-1 mx-auto"></div><div class="w-4 h-1 bg-white/10 rounded mx-auto"></div></div>
+                                <div class="text-center"><div class="w-6 h-2 rounded bg-gradient-to-r from-violet-500 to-blue-400 mb-1 mx-auto"></div><div class="w-4 h-1 bg-white/10 rounded mx-auto"></div></div>
+                                <div class="text-center"><div class="w-6 h-2 rounded bg-gradient-to-r from-blue-500 to-cyan-400 mb-1 mx-auto"></div><div class="w-4 h-1 bg-white/10 rounded mx-auto"></div></div>
+                                <div class="text-center"><div class="w-6 h-2 rounded bg-gradient-to-r from-pink-500 to-violet-400 mb-1 mx-auto"></div><div class="w-4 h-1 bg-white/10 rounded mx-auto"></div></div>
+                            </div>
+                        </div>
+                        <!-- Hover overlay -->
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="bg-gradient-to-r from-pink-500 via-violet-500 to-blue-500 text-white px-6 py-3 rounded-full font-bold text-sm">Buka Template →</span>
+                        </div>
+                    </div>
+                    <!-- Card Info -->
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-violet-500/10 text-violet-400 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Template 03</span>
+                            <div class="flex -space-x-1">
+                                <div class="w-4 h-4 bg-pink-500 rounded-full border border-gray-900"></div>
+                                <div class="w-4 h-4 bg-violet-500 rounded-full border border-gray-900"></div>
+                                <div class="w-4 h-4 bg-blue-500 rounded-full border border-gray-900"></div>
+                            </div>
+                        </div>
+                        <h2 class="text-xl font-bold mb-2">Creative & Dynamic</h2>
+                        <p class="text-gray-500 text-sm leading-relaxed">Bold, modern, dark theme. Glassmorphism & gradient neon. Terlihat cutting-edge dan cocok untuk Gen-Z audience.</p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="text-xs text-gray-600 bg-white/5 px-2 py-1 rounded-md">Dark Mode</span>
+                            <span class="text-xs text-gray-600 bg-white/5 px-2 py-1 rounded-md">Glassmorphism</span>
+                            <span class="text-xs text-gray-600 bg-white/5 px-2 py-1 rounded-md">Neon Gradients</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="mt-16 text-center">
+            <p class="text-gray-600 text-sm mb-3">Setelah client memilih template, kita akan develop full project dengan foto asli & konten lengkap.</p>
+            <p class="text-gray-700 text-xs">Precious Annisa · Singer · Model · Actress · Creative Artist · Kuala Lumpur & Jakarta</p>
+        </div>
+    </main>
+
+</body>
+</html>

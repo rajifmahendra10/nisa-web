@@ -139,7 +139,7 @@ CREATE TABLE IF NOT EXISTS `stats_ribbon` (
 -- Admin user (password: admin123) — CHANGE THIS IN PRODUCTION!
 -- Password hash generated with bcrypt
 INSERT INTO `users` (`name`, `email`, `password`) VALUES
-('Admin', 'admin@annisa.com', '$2b$10$8K1p/OZKvOGIWNjXXRK7/.nBqU7Lg0Iv6F//2NKbGMB.RJXkC0Gxm');
+('Admin', 'admin@annisa.com', '$2b$10$rdueBMuQ0FcfgLnBTsNKAe2u.FTB3HZbUvaJi0E9PJaY/zGdYeg8O');
 
 -- Hero section
 INSERT INTO `hero_section` (`badge_text`, `title_line1`, `title_line2`, `title_line3`, `subtitle`) VALUES

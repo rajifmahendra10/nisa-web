@@ -23,6 +23,20 @@ export default function HeroBlock({ data, settings }: Props) {
       <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-purple-200 rounded-full opacity-20 blur-3xl" />
 
       <div className="container mx-auto px-6 py-20">
+        {/* Logo at top */}
+        {settings.site_logo && (
+          <div className="flex justify-center mb-8">
+            <Image
+              src={settings.site_logo}
+              alt={settings.site_name || "Annisa Dalimunthe"}
+              width={280}
+              height={100}
+              className="h-20 w-auto object-contain drop-shadow-md"
+              unoptimized
+              priority
+            />
+          </div>
+        )}
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left z-10">

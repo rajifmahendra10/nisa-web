@@ -81,6 +81,7 @@ CREATE TABLE IF NOT EXISTS `music` (
   `cover_image` VARCHAR(500),
   `youtube_url` VARCHAR(500),
   `spotify_url` VARCHAR(500),
+  `lyrics` TEXT,
   `is_latest` TINYINT(1) DEFAULT 0,
   `release_date` DATE,
   `sort_order` INT DEFAULT 0,
@@ -164,6 +165,34 @@ INSERT INTO `portfolios` (`title`, `description`, `category`, `tags`, `sort_orde
 INSERT INTO `music` (`title`, `label`, `composer`, `composer_info`, `description`, `is_latest`, `release_date`, `sort_order`) VALUES
 ('Anugerah Terindah', 'Aksen Entertainment', 'Posan Tobing', 'Former drummer of Kotak band, composer of Allysa Dezek''s "Lagu Untuk Kamu" - 300M+ views on YouTube', 'Launch event hosted by renowned Indonesian kids'' idol Chiquita Meidy with coverage from over 80 media outlets nationwide.', 1, '2025-11-01', 1);
 
+UPDATE `music` SET `lyrics` = 'Verse:
+Daddy daddy daddy
+Terima kasih sudah menjagaku
+Mommy mommy mommy
+Terima kasih sudah mengajariku
+Beruntungnya diriku daddy
+Mendapatkan ayah yang baik sepertimu
+Beruntungnya diriku mommy
+Mendapatkan ibu yang tulus sepertimu
+
+Bridge:
+Kalau kubesar nanti, aku akan berbakti
+Dan selalu sayang padamu
+Daddy anugerah terindah
+Mommy surga duniaku
+Yang Tuhan berikan padaku...
+
+Reff:
+Kan kuuntai seribu bunga
+Untukmu ayah ibuku sayang
+Tak akan lekang oleh waktu
+Sayangku padamu
+Kamulah surgaku
+Terima kasih Tuhanku
+Atas kau berikan ayah ibuku
+Aku bahagia selalu
+Didekat, ayah ibuku, sayangku.' WHERE `title` = 'Anugerah Terindah';
+
 -- Stats Ribbon
 INSERT INTO `stats_ribbon` (`label`, `value`, `sort_order`) VALUES
 ('Media Coverage', '80+', 1),
@@ -196,4 +225,6 @@ INSERT INTO `site_settings` (`key_name`, `value`) VALUES
 ('contact_email', 'contact@annisa.com'),
 ('instagram_url', 'https://instagram.com/annisavoice.official'),
 ('youtube_url', '#'),
-('meta_description', 'Precious Annisa Dalimunthe - A rising young star from Kuala Lumpur & Jakarta. Singer, model, actress, and creative artist.');
+('meta_description', 'Precious Annisa Dalimunthe - A rising young star from Kuala Lumpur & Jakarta. Singer, model, actress, and creative artist.'),
+('site_logo', '/logo.png'),
+('whatsapp_url', '');

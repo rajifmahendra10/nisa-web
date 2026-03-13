@@ -12,10 +12,10 @@ export async function POST(req: NextRequest) {
   const session = await getSession();
   if (!session) return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
 
-  const { title, label, composer, composer_info, description, cover_image, youtube_url, spotify_url, is_latest, release_date, sort_order } = await req.json();
+  const { title, label, composer, composer_info, description, cover_image, youtube_url, spotify_url, lyrics, is_latest, release_date, sort_order } = await req.json();
   await query(
-    "INSERT INTO music (title, label, composer, composer_info, description, cover_image, youtube_url, spotify_url, is_latest, release_date, sort_order) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-    [title, label, composer, composer_info, description, cover_image, youtube_url, spotify_url, is_latest || 0, release_date, sort_order || 0]
+    "INSERT INTO music (title, label, composer, composer_info, description, cover_image, youtube_url, spotify_url, lyrics, is_latest, release_date, sort_order) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+    [title, label, composer, composer_info, description, cover_image, youtube_url, spotify_url, lyrics || null, is_latest || 0, release_date, sort_order || 0]
   );
 
   return NextResponse.json({ success: true }, { status: 201 });

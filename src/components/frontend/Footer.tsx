@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Props {
   settings: Record<string, string>;
 }
@@ -9,8 +11,21 @@ export default function FooterBlock({ settings }: Props) {
     <footer className="py-8 bg-gray-900 text-gray-400">
       <div className="container mx-auto px-6 text-center">
         <div className="flex justify-center items-center gap-2 mb-3">
-          <span className="text-xl">👑</span>
-          <span className="font-bold text-white">{settings.site_name || "Precious Annisa"}</span>
+          {settings.site_logo ? (
+            <Image
+              src={settings.site_logo}
+              alt={settings.site_name || "Annisa Dalimunthe"}
+              width={160}
+              height={56}
+              className="h-14 w-auto object-contain brightness-0 invert opacity-90"
+              unoptimized
+            />
+          ) : (
+            <>
+              <span className="text-xl">👑</span>
+              <span className="font-bold text-white">{settings.site_name || "Precious Annisa"}</span>
+            </>
+          )}
         </div>
         <p className="text-sm mb-4">{settings.site_tagline}</p>
         <div className="flex justify-center gap-4 mb-4">

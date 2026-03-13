@@ -10,11 +10,11 @@ export async function PUT(
   if (!session) return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
 
   const { id } = await params;
-  const { title, label, composer, composer_info, description, cover_image, youtube_url, spotify_url, is_latest, release_date, sort_order, is_active } = await req.json();
+  const { title, label, composer, composer_info, description, cover_image, youtube_url, spotify_url, lyrics, is_latest, release_date, sort_order, is_active } = await req.json();
 
   await query(
-    "UPDATE music SET title=?, label=?, composer=?, composer_info=?, description=?, cover_image=?, youtube_url=?, spotify_url=?, is_latest=?, release_date=?, sort_order=?, is_active=? WHERE id=?",
-    [title, label, composer, composer_info, description, cover_image, youtube_url, spotify_url, is_latest, release_date, sort_order, is_active ?? 1, id]
+    "UPDATE music SET title=?, label=?, composer=?, composer_info=?, description=?, cover_image=?, youtube_url=?, spotify_url=?, lyrics=?, is_latest=?, release_date=?, sort_order=?, is_active=? WHERE id=?",
+    [title, label, composer, composer_info, description, cover_image, youtube_url, spotify_url, lyrics || null, is_latest, release_date, sort_order, is_active ?? 1, id]
   );
 
   return NextResponse.json({ success: true });

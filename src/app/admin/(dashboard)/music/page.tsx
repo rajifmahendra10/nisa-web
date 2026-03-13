@@ -10,6 +10,7 @@ interface MusicItem {
   composer: string;
   composer_info: string;
   description: string;
+  lyrics: string;
   cover_image: string;
   youtube_url: string;
   spotify_url: string;
@@ -21,7 +22,7 @@ interface MusicItem {
 
 const EMPTY: Omit<MusicItem, "id"> = {
   title: "", label: "", composer: "", composer_info: "", description: "",
-  cover_image: "", youtube_url: "", spotify_url: "", is_latest: 0,
+  lyrics: "", cover_image: "", youtube_url: "", spotify_url: "", is_latest: 0,
   release_date: "", sort_order: 0, is_active: 1,
 };
 
@@ -105,6 +106,11 @@ export default function MusicAdminPage() {
             <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
             <textarea value={editing.description || ""} onChange={(e) => setEditing({ ...editing, description: e.target.value })}
               rows={3} className="w-full px-3 py-2 border rounded-lg text-gray-800" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Lirik Lagu 🎶</label>
+            <textarea value={editing.lyrics || ""} onChange={(e) => setEditing({ ...editing, lyrics: e.target.value })}
+              rows={10} placeholder="Masukkan lirik lagu di sini..." className="w-full px-3 py-2 border rounded-lg text-gray-800 font-mono text-sm" />
           </div>
           <div className="grid grid-cols-2 gap-3">
             <div>

@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import { Music } from "@/lib/types";
 
@@ -6,6 +8,7 @@ interface Props {
 }
 
 export default function MusicBlock({ music }: Props) {
+  const [showLyrics, setShowLyrics] = useState(false);
   if (music.length === 0) return null;
 
   const latest = music.find((m) => m.is_latest) || music[0];
@@ -64,6 +67,27 @@ export default function MusicBlock({ music }: Props) {
                 )}
 
                 <p className="text-gray-600 text-sm mb-6">{latest.description}</p>
+
+                {/* Lyrics */}
+                {latest.lyrics && (
+                  <div className="mb-6">
+                    <button
+                      onClick={() => setShowLyrics(!showLyrics)}
+                      className="flex items-center gap-2 text-purple-600 font-medium text-sm hover:text-purple-800 transition-colors"
+                    >
+                      <span>🎶</span>
+                      {showLyrics ? "Sembunyikan Lirik" : "Lihat Lirik"}
+                      <span className={`transition-transform ${showLyrics ? "rotate-180" : ""}`}>▼</span>
+                    </button>
+                    {showLyrics && (
+                      <div className="mt-3 p-4 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl border border-purple-100">
+                        <pre className="text-sm text-gray-700 whitespace-pre-wrap font-sans leading-relaxed">
+                          {latest.lyrics}
+                        </pre>
+                      </div>
+                    )}
+                  </div>
+                )}
 
                 <div className="flex flex-wrap gap-3">
                   {latest.youtube_url && (

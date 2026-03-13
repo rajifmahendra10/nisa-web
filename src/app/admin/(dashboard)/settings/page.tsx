@@ -1,13 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import ImageUpload from "@/components/admin/ImageUpload";
 
 interface Settings {
   site_name: string;
   site_tagline: string;
+  site_logo: string;
   contact_email: string;
   instagram_url: string;
   youtube_url: string;
+  whatsapp_url: string;
   meta_description: string;
   [key: string]: string;
 }
@@ -15,9 +18,11 @@ interface Settings {
 const INITIAL: Settings = {
   site_name: "",
   site_tagline: "",
+  site_logo: "",
   contact_email: "",
   instagram_url: "",
   youtube_url: "",
+  whatsapp_url: "",
   meta_description: "",
 };
 
@@ -61,6 +66,7 @@ export default function SettingsAdminPage() {
           <input type="text" value={data.site_tagline} onChange={(e) => update("site_tagline", e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-400 outline-none text-gray-800" />
         </div>
+        <ImageUpload value={data.site_logo} onChange={(url) => update("site_logo", url)} folder="logo" label="Logo Situs 🖼️" />
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Contact Email</label>
           <input type="email" value={data.contact_email} onChange={(e) => update("contact_email", e.target.value)}
@@ -74,6 +80,12 @@ export default function SettingsAdminPage() {
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">YouTube URL</label>
           <input type="url" value={data.youtube_url} onChange={(e) => update("youtube_url", e.target.value)}
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-400 outline-none text-gray-800" />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">WhatsApp URL</label>
+          <input type="url" value={data.whatsapp_url} onChange={(e) => update("whatsapp_url", e.target.value)}
+            placeholder="https://wa.me/628xxx"
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-400 outline-none text-gray-800" />
         </div>
         <div>

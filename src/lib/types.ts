@@ -78,6 +78,7 @@ export interface Music {
   cover_image: string | null;
   youtube_url: string | null;
   spotify_url: string | null;
+  lyrics: string | null;
   is_latest: number;
   release_date: string;
   sort_order: number;

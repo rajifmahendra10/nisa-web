@@ -8,7 +8,7 @@ export default function TalentsBlock({ talents }: Props) {
   if (talents.length === 0) return null;
 
   return (
-    <section className="py-16 bg-gradient-to-r from-pink-50 to-purple-50">
+    <section id="talents" className="py-16 bg-gradient-to-r from-pink-50 to-purple-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 bg-white text-pink-600 text-sm font-medium rounded-full mb-4 shadow-sm">

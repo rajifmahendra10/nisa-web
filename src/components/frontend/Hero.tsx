@@ -22,21 +22,7 @@ export default function HeroBlock({ data, settings }: Props) {
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-pink-200 rounded-full opacity-20 blur-3xl" />
       <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-purple-200 rounded-full opacity-20 blur-3xl" />
 
-      <div className="container mx-auto px-6 py-20">
-        {/* Logo at top */}
-        {settings.site_logo && (
-          <div className="flex justify-center mb-8">
-            <Image
-              src={settings.site_logo}
-              alt={settings.site_name || "Annisa Dalimunthe"}
-              width={280}
-              height={100}
-              className="h-20 w-auto object-contain drop-shadow-md"
-              unoptimized
-              priority
-            />
-          </div>
-        )}
+      <div className="container mx-auto px-6 py-20 pt-28">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left z-10">
@@ -46,13 +32,11 @@ export default function HeroBlock({ data, settings }: Props) {
             </div>
 
             {/* Title with Crown */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-              <span className="text-gray-700">{data.title_line1}</span>
-              <br />
-              <span className="relative inline-block text-pink-500">
-                {/* Crown SVG above the name */}
+            <div className="mb-6">
+              {/* Crown sits ABOVE the text - no absolute positioning */}
+              <div className="flex justify-center lg:justify-start mb-3">
                 <svg
-                  className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-12 animate-crown-glow"
+                  className="w-20 h-14 animate-crown-glow"
                   viewBox="0 0 64 48"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -66,10 +50,9 @@ export default function HeroBlock({ data, settings }: Props) {
                   <circle cx="12" cy="14" r="3" fill="#f472b6" />
                   <circle cx="32" cy="2" r="3" fill="#ec4899" />
                   <circle cx="52" cy="14" r="3" fill="#f472b6" />
-                  {/* Sparkle gems */}
-                  <circle cx="20" cy="36" r="2" fill="#fde047" className="animate-sparkle" />
-                  <circle cx="32" cy="34" r="2.5" fill="#fde047" className="animate-sparkle" style={{ animationDelay: "0.3s" }} />
-                  <circle cx="44" cy="36" r="2" fill="#fde047" className="animate-sparkle" style={{ animationDelay: "0.6s" }} />
+                  <circle cx="20" cy="36" r="2" fill="#fde047" />
+                  <circle cx="32" cy="34" r="2.5" fill="#fde047" />
+                  <circle cx="44" cy="36" r="2" fill="#fde047" />
                   <defs>
                     <linearGradient id="crownGrad" x1="4" y1="4" x2="60" y2="40" gradientUnits="userSpaceOnUse">
                       <stop stopColor="#f9a8d4" />
@@ -78,13 +61,19 @@ export default function HeroBlock({ data, settings }: Props) {
                     </linearGradient>
                   </defs>
                 </svg>
-                {data.title_line2}
-              </span>
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-400">
-                {data.title_line3}
-              </span>
-            </h1>
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+                <span className="text-gray-700">{data.title_line1}</span>
+                <br />
+                <span className="text-pink-500">
+                  {data.title_line2}
+                </span>
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-400">
+                  {data.title_line3}
+                </span>
+              </h1>
+            </div>
 
             <p className="text-lg text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0">
               {data.subtitle}

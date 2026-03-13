@@ -11,6 +11,7 @@ import {
 } from "@/lib/data";
 import { HeroSection, AboutSection, Talent, Portfolio, Music, MediaCoverage, GalleryItem, StatsRibbon, InstagramStat } from "@/lib/types";
 import HeroBlock from "@/components/frontend/Hero";
+import Navbar from "@/components/frontend/Navbar";
 import AboutBlock from "@/components/frontend/About";
 import TalentsBlock from "@/components/frontend/Talents";
 import StatsRibbonBlock from "@/components/frontend/StatsRibbon";
@@ -40,6 +41,7 @@ export default async function HomePage() {
 
   return (
     <div className="bg-white min-h-screen">
+      <Navbar settings={settings} />
       <HeroBlock data={hero} settings={settings} />
       <AboutBlock data={about} />
       <TalentsBlock talents={talents} />
